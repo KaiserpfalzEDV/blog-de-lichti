@@ -1,0 +1,134 @@
+#!/bin/bash -e
+#
+# Copyright (C) 2018  Kaiserpfalz-EDV Service, Roland T. Lichti
+# This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+# This is free software, and you are welcome to redistribute it
+# under certain conditions; type `show c' for details.
+#
+
+function create_directory() {
+    DIRECTORY=$1
+
+    if [ ! -d ${DIRECTORY} ] ; then
+        echo -ne "creating ${DIRECTORY} ... "
+        mkdir -p ${DIRECTORY}
+    fi
+}
+
+function install_plugins {
+    if [ ! -f /tmp/src/plugins.cfg ] ; then
+        echo "No plugins to install."
+
+        return
+    fi
+    pushd . &> /dev/null
+
+    create_directory ./wp-content/plugins
+    cd ./wp-content/plugins
+
+    for PLUGIN in `cat /tmp/src/plugins.cfg` ; do
+        echo -ne "Install plugin '${PLUGIN}' ... downloading ... "
+        curl -Ls https://downloads.wordpress.org/plugin/${PLUGIN}.zip > ${PLUGIN}.zip
+
+        echo -ne "unpacking ... "
+        unzip -qq ${PLUGIN}.zip
+
+        echo -ne "deleting ZIP-file ... "
+        rm -f ${PLUGIN}.zip
+
+        echo "done"
+    done
+
+    popd &> /dev/null
+}
+
+
+function install_themes {
+    if [ ! -f /tmp/src/themes.cfg ] ; then
+        echo "No themes to install."
+
+        return
+    fi
+    pushd . &> /dev/null
+
+    create_directory ./wp-content/themes
+    cd ./wp-content/themes
+
+    for THEME in `cat /tmp/src/themes.cfg` ; do
+        echo -ne "Install theme '${THEME}' ... downloading ... "
+        curl -Ls https://downloads.wordpress.org/theme/${THEME}.zip > ${THEME}.zip
+
+        echo -ne "unpacking ... "
+        unzip -qq ${THEME}.zip
+
+        echo -ne "deleting ZIP-file ... "
+        rm -f ${THEME}.zip
+
+        echo "done"
+    done
+
+    popd &> /dev/null
+}
+
+function install_languages() {
+    if [ ! -f /tmp/src/languages.cfg ] ; then
+        echo "No languages to install."
+        return
+    fi
+    
+    pushd . &> /dev/null
+
+    create_directory /opt/app-root/languages/
+    echo "done"
+    cd /opt/app-root/languages/
+
+    for LANGUAGE_DEFINITION in `cat /tmp/src/languages.cfg` ; do
+        LANGUAGE="$(echo ${LANGUAGE_DEFINITION} | cut -d: -f1)"
+        NAME="$(echo ${LANGUAGE_DEFINITION} | cut -d: -f2)"
+        LOCALE="$(echo ${LANGUAGE_DEFINITION} | cut -d: -f3)"
+
+        echo -ne "Installing language '${NAME}' ... download '${LANGUAGE}' ... saving '${NAME}.mo' ... "
+        curl -Ls https://translate.wordpress.org/projects/${LANGUAGE}/export-translations?format=mo > ${NAME}.mo
+
+        echo "done"
+    done
+
+    popd &> /dev/null
+}
+
+function copy_user_content() {
+    # Copy user provided plugins, themes, language files and configuration
+    # files into the persistent volume. This happens every time the image is
+    # started, which is not ideal. If application is scaled, then could also
+    # occur from multple replicas at the same time. No obvious way to avoid
+    # that, so outstanding question as to whether that will cause any issues.
+
+    if [ -f /tmp/src/configs/wp-config.php ]; then
+        echo -ne "Copying provided wp-config.php ... "
+        cp -f /tmp/src/configs/wp-config.php wp-config.php
+        chmod 644 wp-config.php
+        echo "done"
+    fi
+
+    if [ -f /tmp/src/configs/.htaccess ]; then
+        echo -ne "Copying provided .htaccess ... "
+        cp -f /tmp/src/configs/.htaccess .htaccess
+        chmod 644 .htaccess
+        echo "done"
+    fi
+
+
+    if [ -d /tmp/src/php-pre-start ] ; then
+        echo -n "Adding php pre scripts ... "
+        create_directory ${APP_DATA}/php-pre-start
+        cp -a /tmp/src/php-pre-start/* ${APP_DATA}/php-pre-start
+        echo "done"
+    fi
+}
+
+
+install_languages
+install_plugins
+install_themes
+
+copy_user_content
