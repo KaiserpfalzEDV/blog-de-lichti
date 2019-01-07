@@ -1,0 +1,88 @@
+/*
+ * Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+ *
+ * @package     Authors Notepad
+ * @since       1.0
+ * @author      Space X-Chimp
+ * @copyright   Copyright (c) 2015-2018, Space X-Chimp
+ * @link        https://www.spacexchimp.com/themes/authors-notepad.html
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+
+.aligncenter,
+div.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+
+/* Title
+-------------------------------------------------------------- */
+#title {
+    margin-right: 45%;
+}
+
+/* Search
+-------------------------------------------------------------- */
+.search-label {
+    margin-right: 280px;
+}
+
+.top-search-form {
+    margin-right: 25px;
+}
+
+/* Sidebar
+-------------------------------------------------------------- */
+#sidebar .yellow-sticker-clip {
+    margin-right: 165px;
+}
+#sidebar .yellow-sticker ul {
+    margin-right: 15%;
+}
+
+#sidebar .yellow-sticker-middle ul li a {
+    padding: 4px 25px 4px 0;
+}
+
+#sidebar .white-sticker-middle ul li a {
+    padding: 4px 25px 4px 0;
+}
+
+#sidebar .white-sticker-clip {
+    margin-right: -18px;
+}
+
+.follow {
+    margin-right: -92px;
+}
+
+/* Comment
+-------------------------------------------------------------- */
+#commentform .comment-field {
+    float: right;
+}
+
+#commentform .btnComment {
+    float: right;
+    clear: right;
+}
+
+/* Comment list
+-------------------------------------------------------------- */
+.avatar {
+    float: right;
+    clear: right;
+    margin-left: 10px;
+    margin-right: auto;
+}

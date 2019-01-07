@@ -1,0 +1,740 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Authors Notepad\n"
+"POT-Creation-Date: 2018-11-16 06:29+0300\n"
+"PO-Revision-Date: 2017-01-03 02:55+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:22
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:25
+msgid "We're very sorry, but the page you requested has not been found! It may have been moved or deleted."
+msgstr ""
+
+#: 404.php:28
+msgid "I'm not blaming you, but have you checked your address bar? There might be a typo in the URL."
+msgstr ""
+
+#: 404.php:31
+msgid "If there isn't, you could try searching my website for the content you were looking for:"
+msgstr ""
+
+#: archive.php:29 category.php:29 home.php:27 search.php:40
+msgid "Permanent Link to"
+msgstr ""
+
+#: archive.php:38 category.php:38 home.php:36 index.php:34 page.php:34
+#: page_without_date.php:34 search.php:49 single.php:41
+msgid "Continue reading"
+msgstr ""
+
+#: author-bio.php:20
+msgid "About the Author"
+msgstr ""
+
+#: author-bio.php:29
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: author.php:29
+msgid "Author:"
+msgstr ""
+
+#: author.php:39
+msgid "Profile:"
+msgstr ""
+
+#: author.php:45
+msgid "Website:"
+msgstr ""
+
+#: author.php:53 sitemap.php:55
+msgid "Posts:"
+msgstr ""
+
+#: author.php:66
+msgid "in"
+msgstr ""
+
+#: author.php:74
+msgid "No posts by this author."
+msgstr ""
+
+#: comments.php:43
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:61
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:85
+msgid "Primary Navigation"
+msgstr ""
+
+#: functions.php:86
+msgid "Mobile Navigation"
+msgstr ""
+
+#: functions.php:167
+msgid "Help"
+msgstr ""
+
+#: functions.php:170
+msgid "Need help with Authors-Notepad? Click here!"
+msgstr ""
+
+#: functions.php:231
+msgid "Sidebar Area 1"
+msgstr ""
+
+#: functions.php:233
+msgid "Widgets in this area will be shown below \"Pages\"."
+msgstr ""
+
+#: functions.php:240
+msgid "Sidebar Area 2"
+msgstr ""
+
+#: functions.php:242
+msgid "Widgets in this area will be shown below \"What is this place?\"."
+msgstr ""
+
+#: functions.php:249
+msgid "Sidebar Area 3"
+msgstr ""
+
+#: functions.php:251
+msgid "Widgets in this area will be shown below \"Friends & Links\"."
+msgstr ""
+
+#: functions.php:258
+msgid "Sidebar Area 4"
+msgstr ""
+
+#: functions.php:260
+msgid "Widgets in this area will be shown below \"Recent Posts\"."
+msgstr ""
+
+#: functions.php:272
+msgid "Footer Area 1"
+msgstr ""
+
+#: functions.php:274
+msgid "Widgets in this area will be shown left."
+msgstr ""
+
+#: functions.php:281
+msgid "Footer Area 2"
+msgstr ""
+
+#: functions.php:283
+msgid "Widgets in this area will be shown center."
+msgstr ""
+
+#: functions.php:290
+msgid "Footer Area 3"
+msgstr ""
+
+#: functions.php:292
+msgid "Widgets in this area will be shown right."
+msgstr ""
+
+#: functions.php:348
+msgid "Archive by category "
+msgstr ""
+
+#: functions.php:352
+msgid "Archive by date "
+msgstr ""
+
+#: functions.php:355
+msgid "Archive by month "
+msgstr ""
+
+#: functions.php:357
+msgid "Archive by year "
+msgstr ""
+
+#: functions.php:367 functions.php:395
+msgid "You&apos;re currently reading "
+msgstr ""
+
+#: functions.php:397
+msgid "Search results for "
+msgstr ""
+
+#: functions.php:399
+msgid "Archive by tag "
+msgstr ""
+
+#: functions.php:403
+msgid "Articles posted by "
+msgstr ""
+
+#: functions.php:405
+msgid "You got it "
+msgstr ""
+
+#: functions.php:432
+msgid "Previous page"
+msgstr ""
+
+#: functions.php:433
+msgid "Next page"
+msgstr ""
+
+#: functions.php:435
+msgid "Page "
+msgstr ""
+
+#: functions.php:435
+msgid " of the "
+msgstr ""
+
+#: functions.php:446
+msgid "Posts navigation"
+msgstr ""
+
+#: functions.php:483
+msgid "Post navigation"
+msgstr ""
+
+#: functions.php:508
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:508
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:525
+msgid "(Post author) "
+msgstr ""
+
+#: functions.php:537
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:542
+msgid "Edit"
+msgstr ""
+
+#: functions.php:546
+msgid "Reply"
+msgstr ""
+
+#: functions.php:560 inc/customizer.php:125 inc/customizer.php:137
+#: single.php:53
+msgid "Copyright 2018. All rights reserved."
+msgstr ""
+
+#: functions.php:587
+msgid " queries in "
+msgstr ""
+
+#: functions.php:589
+msgid " seconds"
+msgstr ""
+
+#: functions.php:592
+msgid " mb"
+msgstr ""
+
+#: functions.php:621
+msgid "Not Found"
+msgstr ""
+
+#: functions.php:624
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+#: functions.php:643 functions.php:663 functions.php:675 sitemap.php:65
+msgid "Category: "
+msgstr ""
+
+#: functions.php:646 functions.php:654 functions.php:670 functions.php:682
+msgid "EDIT"
+msgstr ""
+
+#: functions.php:648
+msgid "Posted "
+msgstr ""
+
+#: functions.php:650
+msgid " by "
+msgstr ""
+
+#: functions.php:652
+msgid " in category \""
+msgstr ""
+
+#: functions.php:669 functions.php:681
+msgid "LEAVE A COMMENT"
+msgstr ""
+
+#: header.php:49 inc/customizer.php:41 searchform.php:26 searchform.php:28
+msgid "Search"
+msgstr ""
+
+#: inc/customizer.php:35
+msgid "Meta"
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "Label for the search sticker"
+msgstr ""
+
+#: inc/customizer.php:53 searchform.php:17
+msgid "Write your search and hit Enter"
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "Placeholder for the search sticker"
+msgstr ""
+
+#: inc/customizer.php:65 sidebar.php:32
+msgid "PAGES"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Label for the yellow sticker"
+msgstr ""
+
+#: inc/customizer.php:77 sidebar.php:88
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "Label for the white sticker"
+msgstr ""
+
+#: inc/customizer.php:89 sidebar.php:48
+msgid "About this website"
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "Label for the About widget"
+msgstr ""
+
+#: inc/customizer.php:101 sidebar.php:54
+msgid "Paste here small text about you and/or about your site."
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "Text for the About widget"
+msgstr ""
+
+#: inc/customizer.php:113 sidebar.php:67
+msgid "Friends and Links"
+msgstr ""
+
+#: inc/customizer.php:119
+msgid "Label for the Links widget"
+msgstr ""
+
+#: inc/customizer.php:130
+msgid "Copyright after post"
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "Copyright in footer"
+msgstr ""
+
+#: inc/customizer.php:150
+msgid "Stuff"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Disable \"Paper Search\""
+msgstr ""
+
+#: inc/customizer.php:174
+msgid "Disable \"Yellow Date Stickers\""
+msgstr ""
+
+#: inc/customizer.php:186
+msgid "Disable RSS feed ribbon tag"
+msgstr ""
+
+#: inc/customizer.php:198
+msgid "Disable Yellow Sticker"
+msgstr ""
+
+#: inc/customizer.php:210
+msgid "Disable widget \"About this website\""
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Disable widget \"Friends & Links\""
+msgstr ""
+
+#: inc/customizer.php:234
+msgid "Disable \"Recent Posts Sticker\""
+msgstr ""
+
+#: inc/customizer.php:246
+msgid "Disable block \"About the Author\""
+msgstr ""
+
+#: inc/customizer.php:258
+msgid "Enable \"Breadcrumbs\""
+msgstr ""
+
+#: inc/customizer.php:270
+msgid "Enable \"Page Navigation\""
+msgstr ""
+
+#: inc/customizer.php:282
+msgid "Enable \"Title animation\""
+msgstr ""
+
+#: inc/customizer.php:294
+msgid "Disable button \"Scroll To Top\""
+msgstr ""
+
+#: inc/customizer.php:306
+msgid "Disable the loading of \"Google Fonts\" from external servers in order to make the theme a GDPR compliant"
+msgstr ""
+
+#: inc/customizer.php:318
+msgid "Hide the copyright info of the theme developer in footer"
+msgstr ""
+
+#: inc/customizer.php:330
+msgid "Show info line in footer"
+msgstr ""
+
+#: inc/customizer.php:342
+msgid "Numbers of recent posts in sidebar"
+msgstr ""
+
+#: inc/customizer.php:352
+msgid "Scripts"
+msgstr ""
+
+#: inc/customizer.php:353
+msgid "Put here your scripts"
+msgstr ""
+
+#: inc/customizer.php:364
+msgid "Scripts before posts"
+msgstr ""
+
+#: inc/customizer.php:376
+msgid "Scripts at the beginning of the posts"
+msgstr ""
+
+#: inc/customizer.php:388
+msgid "Scripts at the end of the posts"
+msgstr ""
+
+#: inc/customizer.php:400
+msgid "Scripts after posts"
+msgstr ""
+
+#: inc/customizer.php:407
+msgid "Post"
+msgstr ""
+
+#: inc/customizer.php:419
+msgid "Post titles font (Google Fonts)"
+msgstr ""
+
+#: inc/customizer.php:435
+msgid "Post titles font size"
+msgstr ""
+
+#: inc/customizer.php:451
+msgid "Post titles color"
+msgstr ""
+
+#: inc/customizer.php:463
+msgid "Post titles position"
+msgstr ""
+
+#: inc/customizer.php:469 inc/customizer.php:583
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:470 inc/customizer.php:584
+msgid "Center"
+msgstr ""
+
+#: inc/customizer.php:482
+msgid "Font of posts (Google Fonts)"
+msgstr ""
+
+#: inc/customizer.php:498
+msgid "Font size of posts"
+msgstr ""
+
+#: inc/customizer.php:519
+msgid "Site Title font (Google Fonts)"
+msgstr ""
+
+#: inc/customizer.php:535
+msgid "Site Tagline font (Google Fonts)"
+msgstr ""
+
+#: inc/customizer.php:551
+msgid "Site Title color"
+msgstr ""
+
+#: inc/customizer.php:565
+msgid "Site Tagline color"
+msgstr ""
+
+#: inc/customizer.php:577
+msgid "Site Title position"
+msgstr ""
+
+#: inc/customizer.php:596
+msgid "Font size of Title"
+msgstr ""
+
+#: inc/customizer.php:612
+msgid "Font size of Tagline"
+msgstr ""
+
+#: inc/customizer.php:630
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:641
+msgid "Background Size"
+msgstr ""
+
+#: inc/customizer.php:647
+msgid "Auto (Default)"
+msgstr ""
+
+#: inc/customizer.php:648
+msgid "Contain"
+msgstr ""
+
+#: inc/customizer.php:649
+msgid "Cover"
+msgstr ""
+
+#: inc/theme_info.php:38
+msgid "Theme \"Author's Notepad\""
+msgstr ""
+
+#: inc/theme_info.php:42
+msgid "by Space X-Chimp"
+msgstr ""
+
+#: inc/theme_info.php:49
+msgid "We designed this premium WordPress theme for your personal blogs and diaries. This theme is perfect for writers and artists. \"Authors Notepad\" can be easily customized and already translated to different languages. It utilizes latest HTML-5, CSS-3, PHP and WordPress native functions for creating the awesomeness that looks good on every browser. We are constantly adding new features to this theme to allow you to personalize it to your own needs. We are glad to present you this premium theme. Enjoy!"
+msgstr ""
+
+#: inc/theme_info.php:54
+msgid "Features"
+msgstr ""
+
+#: inc/theme_info.php:57
+msgid "Responsive & Mobile optimized design"
+msgstr ""
+
+#: inc/theme_info.php:58
+msgid "Cross browser compatible (work smooth in any modern browser)"
+msgstr ""
+
+#: inc/theme_info.php:59
+msgid "RTL compatible (right to left)"
+msgstr ""
+
+#: inc/theme_info.php:60
+msgid "Ready for translation (Translated to 13 languages)"
+msgstr ""
+
+#: inc/theme_info.php:61
+msgid "Hand-coded, no WYSIWYG stuff"
+msgstr ""
+
+#: inc/theme_info.php:62
+msgid "HTML5 Inside"
+msgstr ""
+
+#: inc/theme_info.php:63
+msgid "CSS3 Inside"
+msgstr ""
+
+#: inc/theme_info.php:64
+msgid "Easy to set up - Theme Customizer"
+msgstr ""
+
+#: inc/theme_info.php:65
+msgid "Customize using \"Google Web Fonts\""
+msgstr ""
+
+#: inc/theme_info.php:66
+msgid "Built-in iconic font \"Font Awesome\""
+msgstr ""
+
+#: inc/theme_info.php:67
+msgid "Widget ready (in sidebar and footer)"
+msgstr ""
+
+#: inc/theme_info.php:68
+msgid "Built-in Pagination"
+msgstr ""
+
+#: inc/theme_info.php:69
+msgid "Built-in Breadcrumbs"
+msgstr ""
+
+#: inc/theme_info.php:70
+msgid "Template page \"HTML map of the website\""
+msgstr ""
+
+#: inc/theme_info.php:71
+msgid "Template page \"Without date\""
+msgstr ""
+
+#: inc/theme_info.php:72
+msgid "Block \"About Author\" below posts"
+msgstr ""
+
+#: inc/theme_info.php:73
+msgid "Custom text of copyright below posts"
+msgstr ""
+
+#: inc/theme_info.php:74
+msgid "Custom text of copyright in footer"
+msgstr ""
+
+#: inc/theme_info.php:75
+msgid "Custom header image"
+msgstr ""
+
+#: inc/theme_info.php:76
+msgid "Custom background"
+msgstr ""
+
+#: inc/theme_info.php:77
+msgid "Custom menu"
+msgstr ""
+
+#: inc/theme_info.php:78
+msgid "And many more..."
+msgstr ""
+
+#: inc/theme_info.php:79
+msgid "Got more ideas? Tell us!"
+msgstr ""
+
+#: inc/theme_info.php:84
+#, php-format
+msgid "If you have any questions or suggestions for improving and adding new features, feel free to %1$s contact us %2$s."
+msgstr ""
+
+#: inc/theme_info.php:93
+msgid "Translation"
+msgstr ""
+
+#: inc/theme_info.php:96
+msgid "This theme is ready for translation. It written on <strong>English</strong> and translated into:"
+msgstr ""
+
+#: inc/theme_info.php:115
+#, php-format
+msgid "If you want to help translate this theme, please use the POT file, that is included and placed in the \"languages\" folder, in order to create a translation files (*.po, *.mo). Just send the translation files (*.po, *.mo) to us ( %s ) and we will include the translation within the next theme update."
+msgstr ""
+
+#: inc/theme_info.php:119
+msgid "Also you can use an existing PO file that placed in the \"languages\" folder, in order to make corrections."
+msgstr ""
+
+#: inc/theme_info.php:120
+msgid "Many of theme users would be delighted if you share your translation with the community. Thanks for your contribution!"
+msgstr ""
+
+#: inc/theme_info.php:123
+msgid "Thanks to all who helped us translate this theme into other languages!"
+msgstr ""
+
+#: inc/theme_info.php:124
+msgid "Thank you very much for your contribution!"
+msgstr ""
+
+#: inc/theme_info.php:132
+msgid "Happy to enjoy the theme?"
+msgstr ""
+
+#: inc/theme_info.php:139
+msgid "Thanks for your support!"
+msgstr ""
+
+#: inc/theme_info.php:145
+msgid "Explore our website"
+msgstr ""
+
+#: inc/theme_info.php:168 inc/theme_info.php:169
+msgid "Theme Info"
+msgstr ""
+
+#: search.php:61
+msgid "Sorry for your result nothing found"
+msgstr ""
+
+#: searchform.php:24
+msgid "Search for:"
+msgstr ""
+
+#: single.php:42 sitemap.php:46
+msgid "Pages:"
+msgstr ""
+
+#: sitemap.php:38
+msgid "Author(s):"
+msgstr ""
+
+#: sitemap.php:97
+msgid "Archives:"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Authors Notepad"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.spacexchimp.com/themes/authors-notepad.html"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "We designed this premium WordPress theme for your personal blogs and diaries. This theme is perfect for writers and artists. \"Authors Notepad\" can be easily customized and already translated to different languages. It utilizes latest HTML-5, CSS-3, PHP and WordPress native functions for creating the awesomeness that looks good on every browser. We are constantly adding new features to this theme to allow you to personalize it to your own needs. If you want a new feature or just want to be able to change something just ask us and we would be happy to add it. We are glad to present you this premium theme. Enjoy!"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Space X-Chimp"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.spacexchimp.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Sitemap Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Page without date"
+msgstr ""

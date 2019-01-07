@@ -70,6 +70,26 @@ function install_themes {
     popd &> /dev/null
 }
 
+function install_special_theme {
+    THEME=$1
+
+    if [ ! -d /tmp/src/${THEME} ] ; then
+        echo "Theme ${THEME} does not exist."
+
+        return
+    fi
+
+    pushd . &> /dev/null
+
+    echo -ne "Install theme '${THEME} ... "
+    create_directory ./wp-content/themes/
+
+    echo -ne "copy ... "
+    cp -a /tmp/src/${THEME} ./wp-content/themes
+
+    echo "done"
+}
+
 function install_languages() {
     if [ ! -f /tmp/src/languages.cfg ] ; then
         echo "No languages to install."
@@ -129,6 +149,6 @@ function copy_user_content() {
 
 install_languages
 install_plugins
-install_themes
+install_special_theme authors-notepad
 
 copy_user_content
