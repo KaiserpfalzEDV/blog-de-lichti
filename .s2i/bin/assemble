@@ -54,11 +54,13 @@ function install_plugin_languages {
     for PLUGIN in * ; do
         echo -ne "Preparing language for plugin '${PLUGIN}' ... "
 
-        if [ -d "${PLUGIN}/languages" -a -n "${PLUGIN}"/languages/* ] ; then
+        if [ -d "${PLUGIN}/languages" ] ; then
             create_directory "${PLUGIN_LANGUAGES}/${PLUGIN}"
             create_directory "/opt/app-root/data/plugin-languages/${PLUGIN}"
 
-            cp -a "${PLUGIN}/languages"/* "${PLUGIN_LANGUAGES}/${PLUGIN}"
+            for ENTRY in "${PLUGIN}"/languages/* ; do
+                cp -a ${ENTRY} "${PLUGIN_LANGUAGES}/${PLUGIN}"
+            done
 
             echo -n "linking language directory ... "
             rm -rf "${PLUGIN}/languages"
@@ -114,7 +116,9 @@ function install_theme_languages {
             create_directory "${THEME_LANGUAGES}/${THEME}"
             create_directory "/opt/app-root/data/theme-languages/${THEME}"
 
-            cp -a "${THEME}/languages"/* "${THEME_LANGUAGES}/${THEME}"
+            for ENTRY in "${THEME}"/languages/* ; do
+                cp -a ${ENTRY} "${THEME_LANGUAGES}/${THEME}"
+            done
 
             echo -n "linking ... "
             rm -rf "${THEME}/languages"
