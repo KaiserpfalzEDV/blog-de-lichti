@@ -54,19 +54,22 @@ function install_plugin_languages {
     for PLUGIN in * ; do
         echo -ne "Preparing language for plugin '${PLUGIN}' ... "
 
-        if [ -d "${PLUGIN}/languages" ] ; then
-            create_directory "${PLUGIN_LANGUAGES}/${PLUGIN}"
-            create_directory "/opt/app-root/data/plugin-languages/${PLUGIN}"
+        if [ ! -d "${PLUGIN_LANGUAGES}/${PLUGIN}" ] ; then
+            if [ -d "${PLUGIN}/languages" ] ; then
+                create_directory "${PLUGIN_LANGUAGES}/${PLUGIN}"
+                create_directory "/opt/app-root/data/plugin-languages/${PLUGIN}"
 
-            for ENTRY in "${PLUGIN}"/languages/* ; do
-                cp -a ${ENTRY} "${PLUGIN_LANGUAGES}/${PLUGIN}"
-            done
+                echo "copy ... "
+                cp -a "${PLUGIN}"/languages/* "${PLUGIN_LANGUAGES}/${PLUGIN}"
 
-            echo -n "linking language directory ... "
-            rm -rf "${PLUGIN}/languages"
-            ln -sf "/opt/app-root/data/plugin-languages/${PLUGIN}" "${PLUGIN}/languages"
+                echo -n "link ... "
+                rm -rf "${PLUGIN}/languages"
+                ln -sf "/opt/app-root/data/plugin-languages/${PLUGIN}" "${PLUGIN}/languages"
 
-            echo "done"
+                echo "done"
+            else
+                echo "skipped"
+            fi
         else
             echo "skipped"
         fi
@@ -112,19 +115,22 @@ function install_theme_languages {
     for THEME in * ; do
         echo -ne "Preparing language for theme '${THEME}' ... "
 
-        if [ -d "${THEME}/languages" ] ; then
-            create_directory "${THEME_LANGUAGES}/${THEME}"
-            create_directory "/opt/app-root/data/theme-languages/${THEME}"
+        if [ ! -d "${THEME_LANGUAGES}/${THEME}" ] ; then
+            if [ -d "${THEME}/languages" ] ; then
+                create_directory "${THEME_LANGUAGES}/${THEME}"
+                create_directory "/opt/app-root/data/theme-languages/${THEME}"
 
-            for ENTRY in "${THEME}"/languages/* ; do
-                cp -a ${ENTRY} "${THEME_LANGUAGES}/${THEME}"
-            done
+                echo "copy ... "
+                cp -a ""${THEME}""/languages/* "${THEME_LANGUAGES}/${THEME}"
 
-            echo -n "linking ... "
-            rm -rf "${THEME}/languages"
-            ln -sf "/opt/app-root/data/theme-languages/${THEME}" "${THEME}/languages"
+                echo -n "link ... "
+                rm -rf "${THEME}/languages"
+                ln -sf "/opt/app-root/data/theme-languages/${THEME}" "${THEME}/languages"
 
-            echo "done"
+                echo "done"
+            else
+                echo "skipped"
+            fi
         else
             echo "skipped"
         fi
