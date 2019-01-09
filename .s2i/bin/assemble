@@ -7,6 +7,7 @@
 #
 
 PLUGIN_LANGUAGES=/opt/app-root/plugin-languages
+THEME_LANGUAGES=/opt/app-root/theme-languages
 
 function create_directory() {
     DIRECTORY=$1
@@ -100,6 +101,34 @@ function install_themes {
     popd &> /dev/null
 }
 
+
+function install_theme_languages {
+    pushd . &> /dev/null
+
+    cd ./wp-content/themes
+
+    for THEME in * ; do
+        echo -ne "Preparing language for theme '${THEME}' ... "
+
+        if [ -d "${THEME}/languages" ] ; then
+            create_directory "${THEME_LANGUAGES}/${THEME}"
+            create_directory "/opt/app-root/data/theme-languages/${THEME}"
+
+            cp -a "${THEME}/languages"/* "${THEME_LANGUAGES}/${THEME}"
+
+            echo -n "linking ... "
+            rm -rf "${THEME}/languages"
+            ln -sf "/opt/app-root/data/theme-languages/${THEME}" "${THEME}/languages"
+
+            echo "done"
+        else
+            echo "skipped"
+        fi
+    done
+
+    popd &> /dev/null
+}
+
 function install_special_theme {
     THEME=$1
 
@@ -178,8 +207,11 @@ function copy_user_content() {
 
 
 install_languages
+
 install_plugins
 install_plugin_languages
+
 install_special_theme authors-notepad
+install_theme_languages
 
 copy_user_content
