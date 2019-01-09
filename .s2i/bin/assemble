@@ -6,6 +6,8 @@
 # under certain conditions; type `show c' for details.
 #
 
+PLUGIN_LANGUAGES=/opt/app-root/plugin-languages
+
 function create_directory() {
     DIRECTORY=$1
 
@@ -37,6 +39,34 @@ function install_plugins {
         rm -f ${PLUGIN}.zip
 
         echo "done"
+    done
+
+    popd &> /dev/null
+}
+
+
+function install_plugin_languages {
+    pushd . &> /dev/null
+
+    cd ./wp-content/plugins
+
+    for PLUGIN in * ; do
+        echo -ne "Preparing language for plugin '${PLUGIN}' ... "
+
+        if [ -d "${PLUGIN}/languages" ] ; then
+            create_directory "${PLUGIN_LANGUAGES}/${PLUGIN}"
+            create_directory "/opt/app-root/data/plugin-languages/${PLUGIN}"
+
+            cp -a "${PLUGIN}/languages"/* "${PLUGIN_LANGUAGES}/${PLUGIN}"
+
+            echo -n "linking language directory ... "
+            rm -rf "${PLUGIN}/languages"
+            ln -sf "/opt/app-root/data/plugin-languages/${PLUGIN}" "${PLUGIN}/languages"
+
+            echo "done"
+        else
+            echo "skipped"
+        fi
     done
 
     popd &> /dev/null
@@ -149,6 +179,7 @@ function copy_user_content() {
 
 install_languages
 install_plugins
+install_plugin_languages
 install_special_theme authors-notepad
 
 copy_user_content
