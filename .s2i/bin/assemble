@@ -55,11 +55,11 @@ function install_plugin_languages {
         echo -ne "Preparing language for plugin '${PLUGIN}' ... "
 
         if [ ! -d "${PLUGIN_LANGUAGES}/${PLUGIN}" ] ; then
-            if [ -d "${PLUGIN}/languages" ] ; then
+            if [ "$(ls -A ${PLUGIN}/languages)" ] ; then
                 create_directory "${PLUGIN_LANGUAGES}/${PLUGIN}"
                 create_directory "/opt/app-root/data/plugin-languages/${PLUGIN}"
 
-                echo "copy ... "
+                echo -n "copy ... "
                 cp -a "${PLUGIN}"/languages/* "${PLUGIN_LANGUAGES}/${PLUGIN}"
 
                 echo -n "link ... "
@@ -116,11 +116,11 @@ function install_theme_languages {
         echo -ne "Preparing language for theme '${THEME}' ... "
 
         if [ ! -d "${THEME_LANGUAGES}/${THEME}" ] ; then
-            if [ -d "${THEME}/languages" ] ; then
+            if [ "$(ls -A ${THEME}/languages)" ] ; then
                 create_directory "${THEME_LANGUAGES}/${THEME}"
                 create_directory "/opt/app-root/data/theme-languages/${THEME}"
 
-                echo "copy ... "
+                echo -n "copy ... "
                 cp -a ""${THEME}""/languages/* "${THEME_LANGUAGES}/${THEME}"
 
                 echo -n "link ... "
