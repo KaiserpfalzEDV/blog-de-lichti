@@ -213,6 +213,7 @@ class Language_Pack_Upgrader extends WP_Upgrader {
 		 * as we then may need to create a /plugins or /themes directory inside of it.
 		 */
 		$remote_destination = $wp_filesystem->find_folder( WP_LANG_DIR );
+		echo $remote_destination;
 		if ( ! $wp_filesystem->exists( $remote_destination ) )
 			if ( ! $wp_filesystem->mkdir( $remote_destination, FS_CHMOD_DIR ) )
 				return new WP_Error( 'mkdir_failed_lang_dir', $this->strings['mkdir_failed'] . ": " . $remote_destination, $remote_destination );
