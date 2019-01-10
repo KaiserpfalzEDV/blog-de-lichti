@@ -216,7 +216,7 @@ function copy_user_content() {
 
     if [ -f /tmp/src/class-language-pack-upgrader.php ] ; then
         echo -n "Debugging language-update script ... "
-        cp /tmp/src/class-language-pack-upgrader.php wp-admin/includes
+        cp /tmp/src/class-*.php wp-admin/includes
         echo "done"
     fi
 }
