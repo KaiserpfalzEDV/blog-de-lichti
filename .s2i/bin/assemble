@@ -213,10 +213,6 @@ function copy_user_content() {
         cp -a /tmp/src/php-pre-start/* ${APP_DATA}/php-pre-start
         echo "done"
     fi
-
-    echo -n "Debugging language-update script ... "
-    cp /tmp/src/class-*.php wp-admin/includes
-    echo "done"
 }
 
 
